@@ -2,7 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Texture de Bruit SVG Global (0.045 opacité) */
+/* Fond officiel Noir Carbone Garanti */
+html, body, #root {
+  background-color: #0A0A0F !important;
+  color: #FFFFFF !important;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Texture de Bruit SVG Global (0.04 opacité) */
 .noise-overlay {
   position: fixed;
   top: 0; 
@@ -11,7 +20,7 @@
   height: 100vh;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.045;
+  opacity: 0.04;
 }
 
 /* Micro-Interactions : Bouton Magnétique & Calque Glissant */
@@ -21,7 +30,7 @@
   transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.35s ease;
 }
 .btn-magnetic:hover {
-  transform: scale(1.03);
+  transform: scale(1.025);
 }
 .btn-magnetic .btn-slide {
   position: absolute;
@@ -29,7 +38,7 @@
   left: -100%;
   width: 100%; 
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   transition: left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .btn-magnetic:hover .btn-slide {
@@ -41,35 +50,48 @@
   transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.2s ease;
 }
 .hover-lift:hover {
-  transform: translateY(-1px);
+  transform: translateY(-1.5px);
 }
 
-/* Grille Synaptique / Neuro-Vapor */
-.bg-grid-synaptic {
+/* Grille Synaptique Or & Carbone */
+.bg-grid-amber {
   background-image: 
-    radial-gradient(rgba(123, 97, 255, 0.18) 1.5px, transparent 1.5px),
-    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 38px 38px, 120px 120px, 120px 120px;
+    radial-gradient(rgba(245, 158, 11, 0.12) 1.5px, transparent 1.5px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 36px 36px, 120px 120px, 120px 120px;
 }
 
-/* Ligne Scanner Laser Cyan & Plasma */
-@keyframes scanlineVapor {
+/* Ligne Scanner Laser Or Ambre */
+@keyframes scanlineAmber {
   0% { top: 0%; opacity: 0.8; }
   50% { top: 96%; opacity: 1; }
   100% { top: 0%; opacity: 0.8; }
 }
-.scanner-line-vapor {
+.scanner-line-amber {
   position: absolute;
   left: 0; 
   width: 100%; 
   height: 2px;
-  background: linear-gradient(90deg, transparent, #00F5D4, #7B61FF, transparent);
-  box-shadow: 0 0 16px rgba(0, 245, 212, 0.85);
-  animation: scanlineVapor 3.8s ease-in-out infinite;
+  background: linear-gradient(90deg, transparent, #FBBF24, #F59E0B, transparent);
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.9);
+  animation: scanlineAmber 3.8s ease-in-out infinite;
 }
 
-/* Rotation lente double hélice / cercles concentriques */
+/* Flottement doux du livre 3D */
+@keyframes floatBook {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.animate-float-book {
+  animation: floatBook 5s ease-in-out infinite;
+}
+
+/* Rotation lente pour le motif géométrique */
 @keyframes slowSpin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -87,26 +109,17 @@
   animation: blink 0.85s step-end infinite;
 }
 
-/* Lueur pulsante synaptique */
-@keyframes pulseGlow {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.08); }
-}
-.pulse-synaptic {
-  animation: pulseGlow 6s ease-in-out infinite;
-}
-
-/* Smooth custom scrollbar Neuro-Vapor */
+/* Smooth custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #04040A;
+  background: #050508;
 }
 ::-webkit-scrollbar-thumb {
-  background: #181838;
+  background: #1C1C2B;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #7B61FF;
+  background: #F59E0B;
 }

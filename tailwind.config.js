@@ -10,40 +10,36 @@ export default {
         'xs': '380px',
       },
       colors: {
-        void: {
-          DEFAULT: '#070714',
-          deep: '#04040A',
-          card: '#0F0F26',
-          surface: '#151536',
-          border: 'rgba(123, 97, 255, 0.22)'
+        carbon: {
+          DEFAULT: '#0A0A0F',
+          deep: '#050508',
+          card: '#141420',
+          surface: '#1A1A28',
+          border: 'rgba(245, 158, 11, 0.22)'
         },
-        plasma: {
-          DEFAULT: '#7B61FF',
-          bright: '#9D8CFF',
-          dark: '#583DFF',
-          glow: 'rgba(123, 97, 255, 0.35)'
+        amberGold: {
+          DEFAULT: '#F59E0B',
+          bright: '#FBBF24',
+          dark: '#D97706',
+          light: '#FEF3C7',
+          glow: 'rgba(245, 158, 11, 0.35)'
         },
-        cyanCustom: {
-          DEFAULT: '#00F5D4',
-          bright: '#5DFCE5',
-          dark: '#05B29B',
-          glow: 'rgba(0, 245, 212, 0.35)'
+        crimson: {
+          DEFAULT: '#EF4444',
+          dark: '#DC2626',
+          glow: 'rgba(239, 68, 68, 0.35)'
         },
-        neonRose: {
-          DEFAULT: '#F43F5E',
-          bright: '#FB7185',
-          glow: 'rgba(244, 63, 94, 0.35)'
-        },
-        ghost: {
-          DEFAULT: '#F0EFF4',
-          muted: '#9494B8',
-          dark: '#5C5C7A'
+        slateCustom: {
+          DEFAULT: '#2A2A38',
+          text: '#94A3B8',
+          muted: '#64748B'
         }
       },
       fontFamily: {
-        sans: ['Sora', 'sans-serif'],
-        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
-        mono: ['"Fira Code"', 'monospace'],
+        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        display: ['Outfit', 'sans-serif'],
+        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
       borderRadius: {
         '2rem': '2rem',
@@ -52,9 +48,8 @@ export default {
         '4rem': '4rem',
       },
       boxShadow: {
-        'plasma-glow': '0 0 50px -10px rgba(123, 97, 255, 0.45)',
-        'cyan-glow': '0 0 35px -5px rgba(0, 245, 212, 0.4)',
-        'rose-glow': '0 0 35px -5px rgba(244, 63, 94, 0.4)',
+        'gold-glow': '0 0 50px -10px rgba(245, 158, 11, 0.45)',
+        'gold-sm': '0 0 25px -5px rgba(245, 158, 11, 0.45)',
         'card-dark': '0 25px 50px -12px rgba(0, 0, 0, 0.85)',
       }
     },
