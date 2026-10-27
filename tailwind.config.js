@@ -10,35 +10,40 @@ export default {
         'xs': '380px',
       },
       colors: {
-        obsidian: {
-          DEFAULT: '#0D0D12',
-          deep: '#07070B',
-          card: '#13131D',
-          surface: '#1A1A26',
-          border: 'rgba(201, 168, 76, 0.15)'
+        void: {
+          DEFAULT: '#070714',
+          deep: '#04040A',
+          card: '#0F0F26',
+          surface: '#151536',
+          border: 'rgba(123, 97, 255, 0.22)'
         },
-        gold: {
-          DEFAULT: '#F59E0B',
-          bright: '#FBBF24',
-          champagne: '#C9A84C',
-          dark: '#B45309',
-          glow: 'rgba(245, 158, 11, 0.25)'
+        plasma: {
+          DEFAULT: '#7B61FF',
+          bright: '#9D8CFF',
+          dark: '#583DFF',
+          glow: 'rgba(123, 97, 255, 0.35)'
         },
-        slateCustom: {
-          DEFAULT: '#2A2A35',
-          text: '#94A3B8',
-          muted: '#64748B'
+        cyanCustom: {
+          DEFAULT: '#00F5D4',
+          bright: '#5DFCE5',
+          dark: '#05B29B',
+          glow: 'rgba(0, 245, 212, 0.35)'
         },
-        crimson: {
-          DEFAULT: '#EF4444',
-          dark: '#991B1B'
+        neonRose: {
+          DEFAULT: '#F43F5E',
+          bright: '#FB7185',
+          glow: 'rgba(244, 63, 94, 0.35)'
+        },
+        ghost: {
+          DEFAULT: '#F0EFF4',
+          muted: '#9494B8',
+          dark: '#5C5C7A'
         }
       },
       fontFamily: {
-        sans: ['Inter', '"Plus Jakarta Sans"', 'sans-serif'],
-        display: ['Outfit', 'Inter', 'sans-serif'],
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
+        sans: ['Sora', 'sans-serif'],
+        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+        mono: ['"Fira Code"', 'monospace'],
       },
       borderRadius: {
         '2rem': '2rem',
@@ -47,9 +52,10 @@ export default {
         '4rem': '4rem',
       },
       boxShadow: {
-        'gold-glow': '0 0 50px -10px rgba(201, 168, 76, 0.3)',
-        'gold-sm': '0 0 20px -5px rgba(245, 158, 11, 0.35)',
-        'card-dark': '0 25px 50px -12px rgba(0, 0, 0, 0.7)',
+        'plasma-glow': '0 0 50px -10px rgba(123, 97, 255, 0.45)',
+        'cyan-glow': '0 0 35px -5px rgba(0, 245, 212, 0.4)',
+        'rose-glow': '0 0 35px -5px rgba(244, 63, 94, 0.4)',
+        'card-dark': '0 25px 50px -12px rgba(0, 0, 0, 0.85)',
       }
     },
   },
