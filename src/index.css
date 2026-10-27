@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Texture de Bruit SVG Global (0.045 opacité) */
+.noise-overlay {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  width: 100vw; 
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.045;
+}
+
+/* Micro-Interactions : Bouton Magnétique & Calque Glissant */
+.btn-magnetic {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.35s ease;
+}
+.btn-magnetic:hover {
+  transform: scale(1.03);
+}
+.btn-magnetic .btn-slide {
+  position: absolute;
+  top: 0; 
+  left: -100%;
+  width: 100%; 
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+  transition: left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.btn-magnetic:hover .btn-slide {
+  left: 100%;
+}
+
+/* Micro-Interaction : Hover Lift */
+.hover-lift {
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.2s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-1px);
+}
+
+/* Grille de fond de luxe subtile */
+.bg-grid {
+  background-image: 
+    radial-gradient(rgba(201, 168, 76, 0.10) 1.5px, transparent 1.5px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 36px 36px, 120px 120px, 120px 120px;
+}
+
+/* Ligne Scanner Laser (Artefact SVG) */
+@keyframes scanline {
+  0% { top: 0%; opacity: 0.8; }
+  50% { top: 96%; opacity: 1; }
+  100% { top: 0%; opacity: 0.8; }
+}
+.scanner-line {
+  position: absolute;
+  left: 0; 
+  width: 100%; 
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FBBF24, #C9A84C, transparent);
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.8);
+  animation: scanline 4s ease-in-out infinite;
+}
+
+/* Rotation lente pour le motif géométrique */
+@keyframes slowSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.spin-slow {
+  animation: slowSpin 28s linear infinite;
+}
+
+/* Curseur clignotant Monospace */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.cursor-blink {
+  animation: blink 0.9s step-end infinite;
+}
+
+/* Smooth custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07070B;
+}
+::-webkit-scrollbar-thumb {
+  background: #1F1F2E;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A84C;
+}
